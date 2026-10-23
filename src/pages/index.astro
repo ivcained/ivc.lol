@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site, hero, about, projects, readouts, collaborate } from '../data/site';
+---
+<Base>
+  <Header slot="header" />
+
+  <!-- 1. Hero: the field, the mark, the line -->
+  <section class="hero" aria-label="Introduction">
+    <p class="hero__meta" data-intro data-reveal="fade" data-delay="0.1">{hero.meta}</p>
+    <h1 class="hero__mark" data-split="chars" data-intro>{site.wordmark}</h1>
+    <div class="hero__row">
+      <p class="hero__line" data-intro data-reveal="fade" data-delay="0.2">{hero.line}</p>
+      <div class="hero__ctas" data-intro data-reveal="fade" data-delay="0.35">
+        <a class="hero__cta" href={hero.cta.href} data-magnetic="0.25">{hero.cta.label}</a>
+        <a class="hero__cta hero__cta--ghost" href="#work" data-magnetic="0.25">View work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Signal: who ivc is -->
+  <section class="sec" id="signal" aria-label="About">
+    <div class="about__grid">
+      <div class="about__left">
+        <p class="kicker" data-reveal="fade">{about.kicker}</p>
+        <h2 class="sec__heading" data-split="words">{about.heading}</h2>
+        <div class="params" data-reveal="up" data-delay="0.2">
+          <div class="params__head"><span>Signal parameters</span><span>Live</span></div>
+          {readouts.map((r) => (
+            <div class="params__row">
+              <span class="params__label">{r.label}</span>
+              <span class="params__ticks" aria-hidden="true"></span>
+              <span class="params__value" data-readout={r.value} data-suffix={r.suffix}>000</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="about__right about__body">
+        {about.body.map((p, i) => (
+          <p class={i === 0 ? 'lead' : undefined} data-reveal="up" data-delay={String(i * 0.12)}>{p}</p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Work: the transmission log -->
+  <section class="sec" id="work" aria-label="Work">
+    <div class="work__head">
+      <h2>Transmission log</h2>
+      <span>{projects.length} channels</span>
+    </div>
+    <ul class="log">
+      {projects.map((p, i) => (
+        <li data-reveal="up" data-delay={String(i * 0.04)}>
+          <a href={p.href} target="_blank" rel="noopener" data-cursor="OPEN">
+            <span class="log__idx">{String(i + 1).padStart(2, '0')}</span>
+            <span class="log__name">{p.name}</span>
+            <span class="log__kind">{p.kind}</span>
+            <span class="log__meta">
+              <span class={p.status === 'live' ? 'log__live' : undefined}>{p.status}</span>
+              <span>{p.year}</span>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 4. Collaborate: the ask -->
+  <section class="sec collab" id="collaborate" aria-label="Collaborate">
+    <h2 class="sec__heading collab__heading" data-split="words">{collaborate.heading}</h2>
+    <div class="collab__body">
+      {collaborate.body.map((p, i) => (
+        <p data-reveal="up" data-delay={String(i * 0.12)}>{p}</p>
+      ))}
+    </div>
+    <div class="collab__cta" data-reveal="up" data-delay="0.25">
+      <a class="hero__cta" href={collaborate.cta.href} data-magnetic="0.25">{collaborate.cta.label}</a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Base>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import { onPage } from '../engine';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  onPage(() => {
+    // Readouts tick up when they enter view, like a counter locking on.
+    document.querySelectorAll<HTMLElement>('[data-readout]').forEach((el) => {
+      const target = parseInt(el.dataset.readout || '0', 10);
+      const suffix = el.dataset.suffix || '';
+      const pad = String(target).length;
+      const state = { v: 0 };
+      gsap.to(state, {
+        v: target,
+        duration: 1.6,
+        ease: 'expo.out',
+        onUpdate: () => { el.textContent = String(Math.round(state.v)).padStart(pad, '0') + suffix; },
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+      });
+    });
+  });
+</script>

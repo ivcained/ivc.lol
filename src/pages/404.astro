@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+---
+<Base title="No signal">
+  <Header slot="header" />
+  <section class="lost">
+    <h1 class="lost__code" data-split="chars">No signal</h1>
+    <p class="lost__line" data-reveal="fade">This frequency is empty. The transmission you are looking for does not exist or has moved.</p>
+    <a class="hero__cta" href="/" data-magnetic="0.25">Back to the signal</a>
+  </section>
+</Base>

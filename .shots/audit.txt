@@ -1,0 +1,5 @@
+FAIL  site                          og:image /og.png does not load (create a 1200x630 image)
+
+1 pages crawled from http://127.0.0.1:51530/
+heaviest page /: ~128 KB | html 3 | JS 7 (gz) | CSS 3 (gz) | fonts 115 | images 0
+1 FAIL, 0 WARN

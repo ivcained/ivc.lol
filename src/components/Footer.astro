@@ -1,0 +1,18 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="ftr">
+  <a class="ftr__cta" href={`mailto:${site.email}`} data-magnetic="0.08" data-cursor="SEND">Tune in</a>
+  <div class="ftr__row">
+    <nav class="ftr__links" aria-label="Social">
+      {site.socials.map((s) => (
+        <a href={s.href} target="_blank" rel="noopener">{s.label}</a>
+      ))}
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+    </nav>
+    <p class="ftr__colophon">
+      © {year} {site.name} · Astro + GSAP + one WebGL context · #7FFF00
+    </p>
+  </div>
+</footer>

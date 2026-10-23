@@ -1,0 +1,202 @@
+{
+  "url": "http://127.0.0.1:4400/",
+  "errors": [],
+  "failed": [],
+  "desktop": {
+    "loaderMs": 2106,
+    "vitals": {
+      "lcpMs": 1424,
+      "lcpElement": "p.hero__line",
+      "cls": 0
+    },
+    "height": 3467,
+    "overflowX": false,
+    "offenders": [],
+    "h1": [
+      "IVC"
+    ],
+    "smallTargets": [],
+    "glHidden": [],
+    "title": "ivc | Digital artist & builder",
+    "glOn": true,
+    "scrollFps": {
+      "fps": 37,
+      "worstFrameMs": 117
+    },
+    "idleMotion": false,
+    "idleAt": null
+  },
+  "mobile": {
+    "throttled": true,
+    "loaderMs": 4353,
+    "vitals": {
+      "lcpMs": 3724,
+      "lcpElement": "p.hero__line",
+      "cls": 0
+    },
+    "height": 2911,
+    "overflowX": false,
+    "offenders": [],
+    "h1": [
+      "IVC"
+    ],
+    "smallTargets": [],
+    "glHidden": [],
+    "title": "ivc | Digital artist & builder",
+    "glOn": true,
+    "scrollFps": {
+      "fps": 27,
+      "worstFrameMs": 83
+    }
+  },
+  "files": [
+    "/Users/lc/Projects/ivc.lol/.shots/d-00-firstpaint.png",
+    "/Users/lc/Projects/ivc.lol/.shots/d-01-hero.png",
+    "/Users/lc/Projects/ivc.lol/.shots/d-02-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/d-03-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/d-04-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/d-05-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/d-06-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/d-07-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/k-01-focus.png",
+    "/Users/lc/Projects/ivc.lol/.shots/k-02-focus.png",
+    "/Users/lc/Projects/ivc.lol/.shots/k-03-focus.png",
+    "/Users/lc/Projects/ivc.lol/.shots/k-04-focus.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-01-rest.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-01-hover.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-02-rest.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-02-hover.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-03-rest.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-03-hover.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-04-rest.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-04-hover.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-05-rest.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-05-hover.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-06-rest.png",
+    "/Users/lc/Projects/ivc.lol/.shots/h-06-hover.png",
+    "/Users/lc/Projects/ivc.lol/.shots/m-01-hero.png",
+    "/Users/lc/Projects/ivc.lol/.shots/m-02-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/m-03-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/m-04-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/m-05-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/m-06-scroll.png",
+    "/Users/lc/Projects/ivc.lol/.shots/r-01-hero.png",
+    "/Users/lc/Projects/ivc.lol/.shots/r-02-mid.png"
+  ],
+  "notes": [
+    "desktop FPS runs headless on a software GPU: treat it as a floor, not a measurement of real hardware",
+    "mobile runs at 4x CPU slowdown on slow 4G: mobile.vitals and mobile.scrollFps are the numbers that count"
+  ],
+  "keyboard": {
+    "stops": [
+      "a \"Skip to content\"",
+      "a \"IVC\"",
+      "a \"SIGNAL\"",
+      "a \"WORK\"",
+      "a \"CONTACT\"",
+      "a \"LET'S TALK\"",
+      "a \"VIEW WORK\"",
+      "a \"TUNE IN\"",
+      "a \"GITHUB\"",
+      "a \"X\"",
+      "a \"FARCASTER\"",
+      "a \"IVCAINED@GMAIL.COM\""
+    ],
+    "skipLinkFirst": true,
+    "noVisibleFocus": [],
+    "invisibleFocus": [],
+    "stuck": false
+  },
+  "hover": {
+    "targets": [
+      {
+        "shot": "h-01",
+        "label": "a \"Let's talk\"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "backgroundColor",
+          "transform"
+        ]
+      },
+      {
+        "shot": "h-02",
+        "label": "a \"View work\"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "color",
+          "borderColor",
+          "textDecorationColor",
+          "transform",
+          "boxShadow"
+        ]
+      },
+      {
+        "shot": "h-03",
+        "label": "a \"01 Fiddy AI-agent Farcaster client live \"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "backgroundColor",
+          "color",
+          "borderColor",
+          "textDecorationColor",
+          "follower"
+        ]
+      },
+      {
+        "shot": "h-04",
+        "label": "a \"Tune in\"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "color",
+          "borderColor",
+          "textDecorationColor",
+          "transform",
+          "follower"
+        ]
+      },
+      {
+        "shot": "h-05",
+        "label": "a \"IVC\"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "opacity"
+        ]
+      },
+      {
+        "shot": "h-06",
+        "label": "a \"Signal\"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "color",
+          "borderColor",
+          "textDecorationColor",
+          "transform"
+        ]
+      }
+    ],
+    "noHoverChange": [],
+    "colorOnly": [],
+    "covered": [],
+    "cursorFollower": true
+  },
+  "reduced": {
+    "hiddenText": 0
+  },
+  "a11y": {
+    "violations": [],
+    "serious": 0,
+    "contrastNeedsReview": 6
+  }
+}
